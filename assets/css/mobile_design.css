@@ -1,0 +1,305 @@
+/*Mobile Design*/
+@media only screen and (max-height:737px){
+    .slider{
+      height: 100vh !important;
+    }
+    .slide_buttons{
+     bottom: 20px !important;
+    }
+    .slide_viewer{
+      height: 100vh !important;
+    }
+    .directional_nav {
+      bottom: 72px !important;
+    }
+  }
+  @media only screen and (max-width:737px){
+    .slide video{
+        height: 100vh !important;
+        width: auto;
+      }
+  }
+  @media only screen and ((min-width:390px) and (max-width: 750px)) {
+    .nav {
+      height: 100px;
+    }
+    .nav .logo img {
+      width: 200px;
+    }
+    .social-media,
+    .social-media a,
+    .social-media .qouta,
+    .nav .social-media a svg {
+      display: none;
+    }
+    .slide .column .row {
+      margin-top: 150px;
+      margin-left: 10px;
+      justify-content: flex-start;
+    }
+    .slide .column .row .title {
+      margin: 0;
+      align-self: flex-start;
+      font-size: 50px;
+    }
+    .slide_viewer,
+    .slide_group {
+      height: 86vh;
+    }
+    .directional_nav {
+      bottom: 44px;
+    }
+    .menu-open {
+      display: block;
+      position: absolute;
+      right: 20px;
+    }
+    .show-menu {
+      animation-name: menu;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+      position: absolute;
+      z-index: 998;
+      display: block;
+    }
+    .menu-close {
+      margin: 23px 20px;
+      position: absolute;
+      right: 0;
+    }
+    .slide .column .row {
+      margin-top: 40px;
+    }
+    .slide .column {
+      flex-direction: column-reverse;
+    }
+    .slide .column:nth-child(1) {
+      align-items: center;
+    }
+    .slide .column .row .slide-image {
+      width: 250px;
+      height: 250px;
+    }
+    .slide .column .row .title {
+      font-size: 35px;
+    }
+    .slide .column .row .content {
+      width: 300px;
+      padding-right: 10px;
+    }
+    .slide .column .row .link {
+      padding-left: 55px;
+    }
+    .slide .column .row .link a {
+      font-size: 15px;
+    }
+    .our-services .container-services {
+      margin: 0;
+    }
+    .our-services{
+      padding: 0px;
+    }
+    .our-services .container-services .heading-services .title-services{
+      font-size: 50px;
+      width: 300px;
+    }
+    .floating-container{
+      bottom: 15px !important;
+      right: 12px !important;
+    }
+  
+    .content-services{
+      padding: 12px !important;
+      font-size: 16px !important;
+    }
+  }
+  @media only screen and ((min-width: 360px) and (max-width:390px)) {
+    .nav {
+      height: 100px;
+    }
+    .nav .logo img {
+      width: 200px;
+    }
+    .social-media,
+    .social-media a,
+    .social-media .qouta,
+    .nav .social-media a svg {
+      display: none;
+    }
+    .slide .column .row {
+      margin-top: 150px;
+      margin-left: 10px;
+      justify-content: flex-start;
+    }
+    .slide .column .row .title {
+      margin: 0;
+      align-self: flex-start;
+      font-size: 50px;
+    }
+    .slide_viewer,
+    .slide_group {
+      height: 86vh;
+    }
+    .directional_nav {
+      bottom: 44px;
+    }
+    .menu-open {
+      display: block;
+      position: absolute;
+      right: 20px;
+    }
+    .show-menu {
+      animation-name: menu;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+      position: absolute;
+      z-index: 998;
+      display: block;
+    }
+    .menu-close {
+      margin: 23px 20px;
+      position: absolute;
+      right: 0;
+    }
+    .slide .column .row {
+      margin-top: 40px;
+    }
+    .slide .column {
+      flex-direction: column-reverse;
+    }
+    .slide .column:nth-child(1) {
+      align-items: center;
+    }
+    .slide .column .row .slide-image {
+      width: 250px;
+      height: 250px;
+    }
+    .slide .column .row .title {
+      font-size: 35px;
+    }
+    .slide .column .row .content {
+      width: 300px;
+      padding-right: 10px;
+    }
+    .slide .column .row .link {
+      padding-left: 55px;
+    }
+    .slide .column .row .link a {
+      font-size: 15px;
+    }
+    .our-services .container-services {
+      margin: 0;
+    }
+    .our-services{
+      padding: 0px;
+    }
+    .our-services .container-services .heading-services .title-services{
+      font-size: 50px;
+      width: 300px;
+    }
+    .floating-container{
+      bottom: 15px !important;
+      right: 12px !important;
+    }
+  
+    .content-services{
+      padding: 12px !important;
+      font-size: 16px !important;
+    }
+  }
+  @media only screen and ((min-width: 0px) and (max-width:360px)) {
+    .nav {
+      height: 100px;
+    }
+    .nav .logo img {
+      width: 200px;
+    }
+    .social-media,
+    .social-media a,
+    .social-media .qouta,
+    .nav .social-media a svg {
+      display: none;
+    }
+    .slide .column .row {
+      margin-top: 150px;
+      margin-left: 10px;
+      justify-content: flex-start;
+    }
+    .slide .column .row .title {
+      margin: 0;
+      align-self: flex-start;
+      font-size: 50px;
+    }
+    .slide_viewer,
+    .slide_group {
+      height: 86vh;
+    }
+    .directional_nav {
+      bottom: 44px;
+    }
+    .menu-open {
+      display: block;
+      position: absolute;
+      right: 20px;
+    }
+    .show-menu {
+      animation-name: menu;
+      animation-duration: 0.5s;
+      animation-timing-function: ease-in-out;
+      position: absolute;
+      z-index: 998;
+      display: block;
+    }
+    .menu-close {
+      margin: 23px 20px;
+      position: absolute;
+      right: 0;
+    }
+    .slide .column .row {
+      margin-top: 40px;
+    }
+    .slide .column {
+      flex-direction: column-reverse;
+    }
+    .slide .column:nth-child(1) {
+      align-items: center;
+    }
+    .slide .column .row .slide-image {
+      width: 250px;
+      height: 250px;
+    }
+    .slide .column .row .title {
+      font-size: 35px;
+    }
+    .slide .column .row .content {
+      width: 300px;
+      padding-right: 10px;
+    }
+    .slide .column .row .link {
+      padding-left: 55px;
+    }
+    .slide .column .row .link a {
+      font-size: 15px;
+    }
+    .our-services .container-services {
+      margin: 0;
+    }
+    .our-services{
+      padding: 0px;
+    }
+    .our-services .container-services .heading-services .title-services{
+      font-size: 50px;
+      width: 300px;
+    }
+    .floating-container{
+      bottom: 15px !important;
+      right: 12px !important;
+    }
+    .our-services .container-services .heading-services{
+      padding: 0 !important;
+    }
+    .content-services{
+      padding: 12px !important;
+      font-size: 16px !important;
+    }
+  }
