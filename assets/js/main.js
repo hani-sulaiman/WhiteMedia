@@ -126,37 +126,44 @@ document.querySelector(".hide-list").addEventListener("click", () => {
 
 var services = document.querySelectorAll(".service");
 
-intervalService = setInterval(slideshowService, 5000, (x = 0));
+
+
+
+
+
+intervalService = setInterval(slideshowService, 7000, (x = 0));
 function slideshowService() {
   clickers = document.querySelectorAll(".service-button");
   if (x == services.length) {
     clearInterval(intervalService);
-    intervalService = setInterval(slideshowService, 5000, (x = 0));
+    intervalService = setInterval(slideshowService, 7000, (x = 0));
   }
   if (x == 0) {
     clickers[x].classList.add("clicked");
-    clickers[clickers.length-1].classList.remove("clicked");
-    services[services.length-1].classList.remove("show-service");
-    services[x].classList.add("show-service");
+    clickers[x].click();
+    clickers[clickers.length - 1].classList.remove("clicked");
   } else if (x == services.length) {
+    clickers[x].click();
     clickers[x].classList.add("clicked");
-    services[x].classList.add("show-service");
   } else {
+    clickers[x].click();
     clickers[x].classList.add("clicked");
-    clickers[x-1].classList.remove("clicked");
-    services[x].classList.add("show-service");
-    services[x - 1].classList.remove("show-service");
+    clickers[x - 1].classList.remove("clicked");
   }
   x++;
 }
-
-clickers = document.querySelectorAll(".service-button");
-clickers.forEach((clicker) => {
-  clicker.addEventListener("click", () => {
-    clickers.forEach((element) => {
-      element.classList.remove("clicked");
+showService();
+function showService(){
+  var clickers = document.querySelectorAll(".service-button");
+  clickers.forEach((clicker,k) => {
+    clickers[k].addEventListener("click", () => {
+      for (y = 0; y < clickers.length; y++) {
+        clickers[y].classList.remove("clicked");
+        services[y].classList.remove("show-service");
+      }
+      clicker.classList.add("clicked");
+      services[k].classList.add("show-service");
     });
-    clicker.classList.add("clicked");
   });
-});
-clicker_clicked = document.querySelector("button.clicked");
+   
+}
