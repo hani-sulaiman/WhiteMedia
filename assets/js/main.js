@@ -125,10 +125,10 @@ document.querySelector(".hide-list").addEventListener("click", () => {
 });
 
 var services = document.querySelectorAll(".service");
-var delay=0;
+var delay = 0;
 intervalService = setInterval(slideshowService, delay, (x = 0));
 function slideshowService() {
-  delay=9000;
+  delay = 9000;
   clickers = document.querySelectorAll(".service-button");
   if (x == services.length) {
     clearInterval(intervalService);
@@ -148,3 +148,46 @@ clickers.forEach((clicker, k) => {
     services[k].classList.add("show-service");
   });
 });
+var comments = {
+  0: {
+    name: "person1",
+    comment:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus reiciendis voluptate distinctio, unde animi officia, possimus accusamus corrupti consectetur repellendus sequi atque molestias! Tenetur sapiente aut veritatis obcaecati. Repellendus, corrupti!",
+    imgPath: "assets/icons/person1.webp",
+  },
+  1: {
+    name: "person2",
+    comment:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus reiciendis voluptate distinctio, unde animi officia, possimus accusamus corrupti consectetur repellendus sequi atque molestias! Tenetur sapiente aut veritatis obcaecati. Repellendus, corrupti!",
+    imgPath: "assets/icons/person1.webp",
+  },
+  2: {
+    name: "person3",
+    comment:
+      "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus reiciendis voluptate distinctio, unde animi officia, possimus accusamus corrupti consectetur repellendus sequi atque molestias! Tenetur sapiente aut veritatis obcaecati. Repellendus, corrupti!",
+    imgPath: "assets/icons/person1.webp",
+  },
+};
+var delayComments = 0;
+commentInterval = setInterval(commenter, delayComments, (Counter_comment = 0));
+function commenter() {
+  if (delayComments == 0) {
+    delayComments = 12000;
+    clearInterval(commentInterval);
+    commentInterval = setInterval(
+      commenter,
+      delayComments,
+      (Counter_comment = 0)
+    );
+  }
+  if (Counter_comment == Object.keys(comments).length) {
+    clearInterval(commentInterval);
+    commentInterval = setInterval(commenter, delayComments, (Counter_comment = 0));
+  }
+  document.getElementById("img-person").src = comments[Counter_comment].imgPath;
+  document.querySelector(".commenter p").innerHTML =
+    comments[Counter_comment].name;
+  document.querySelector(".box-comment").innerHTML =
+    comments[Counter_comment].comment;
+  Counter_comment++;
+}

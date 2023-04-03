@@ -525,11 +525,11 @@ section.people-opinion .people .slide-opinion::after {
   font-family: "Fell";
   font-size: 150px;
   position: absolute;
-  padding: 42px 60px;
+  padding: 42px 0px 0px 64px;
   background-color: #f6f6f6;
   height: 75px;
-  bottom: -55px;
-  right: -85px;
+  bottom: -26px;
+  right: -46px;
   color: var(--main-font-color);
 }
 section.people-opinion .people .slide-opinion::before {
@@ -538,10 +538,10 @@ section.people-opinion .people .slide-opinion::before {
   font-family: "Fell";
   font-size: 150px;
   position: absolute;
-  top: -54px;
-  left: -99px;
+  top: -17px;
+  left: -39px;
   color: var(--main-font-color);
-  padding: 42px 60px;
+  padding: 42px 0px 0px 64px;
   background-color: #f6f6f6;
   height: 75px;
 }
