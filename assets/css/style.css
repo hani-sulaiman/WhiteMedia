@@ -14,6 +14,7 @@
 }
 * {
   font-family: "Gilroy" !important ;
+  box-sizing: border-box;
 }
 body.hide {
   display: none;
@@ -32,7 +33,7 @@ body {
   top: 0;
   background-color: #fff;
   height: 100vh;
-  width: 100%;
+  width: 80%;
 }
 .menu-open,
 .menu {
@@ -41,7 +42,7 @@ body {
 .slider {
   height: 100vh !important;
 }
-.nav-transparent{
+.nav-transparent {
   background-color: transparent !important;
 }
 .nav {
@@ -56,7 +57,22 @@ body {
   z-index: 999;
   background-color: transparent;
 }
-
+.menu-open{
+  display: flex;
+  flex-direction: column;
+}
+.menu .container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  padding-top: 10px;
+}
+.menu .container a,.menu .container div{
+  color: var(--main-font-color);
+  font-size: 20px;
+  padding: 10px;
+  text-decoration: none;
+}
 .nav.scrolled-up {
   display: flex;
   transition: all ease-in-out 0.3s;
@@ -236,7 +252,6 @@ body {
 .our-services .container-services .heading-services {
   padding: 20px;
   flex-basis: 45%;
-
 }
 .our-services .container-services .heading-services .title-services {
   padding-top: 50px;
@@ -274,7 +289,7 @@ body {
 .our-services .container-services .viewer-services .service {
   display: none;
 }
-.show-service{
+.show-service {
   position: relative;
   animation-name: service;
   animation-timing-function: ease-out;
@@ -470,7 +485,7 @@ section.order .column .card {
   margin: 10px;
   border-radius: 7px;
   width: 190px;
-  height: 190px;
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -551,13 +566,13 @@ section.people-opinion .people .slide-opinion::before {
   background-color: #f6f6f6;
   height: 75px;
 }
-.slide-opinion .container.popup{
-    animation-name: popup;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    transition: all ease-in-out 1s;
+.slide-opinion .container.popup {
+  animation-name: popup;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  transition: all ease-in-out 1s;
 }
-section.people-opinion .people .slide-opinion .commenter{
+section.people-opinion .people .slide-opinion .commenter {
   position: relative;
 }
 section.people-opinion .people .slide-opinion .commenter img {

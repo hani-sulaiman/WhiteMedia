@@ -23,6 +23,9 @@
   .show-list {
     left: 34%;
   }
+  .nav .logo{
+    padding: 0;
+  }
   .img-c {
     width: 50%;
     height: 33vh;
@@ -70,7 +73,7 @@
     font-size: 42px;
     padding-left: 34px;
   }
-  section.people-opinion .people .slide-opinion{
+  section.people-opinion .people .slide-opinion {
     padding: 50px;
   }
   .nav {
@@ -113,12 +116,30 @@
     animation-timing-function: ease-in-out;
     position: absolute;
     z-index: 998;
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+  .menu .container .qouta {
+    margin: 5px;
+    min-width: 210px;
+    margin-right: 5px;
+    position: relative;
+    top: -8px;
+    background: linear-gradient(45deg, #e7b47f 15%, #c48f56 65%) !important;
+    padding: 10px;
+  }
+  .menu .container .qouta a {
+    font-size: 18px;
+    padding: 0px 20px;
+    color: rgb(240 240 240) !important;
+    text-decoration: none;
   }
   .menu-close {
-    margin: 23px 20px;
-    position: absolute;
-    right: 0;
+    margin: 23px 0px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
   }
   .slide .column .row {
     margin-top: 40px;
@@ -164,6 +185,20 @@
   .content-services {
     padding: 12px !important;
     font-size: 16px !important;
+  }
+  footer .container-footer .column{
+    flex-basis: 100%;
+  }
+  section.people-opinion .people .slide-opinion::before,section.people-opinion .people .slide-opinion::after{
+    display: none;
+  }
+  section.order .column .card{
+   width: 185px; 
+  }
+  section.order .column a{
+    align-self: center;
+    width: 220px;
+    text-align: center;
   }
 }
 @media only screen and ((min-width: 360px) and (max-width:390px)) {
@@ -354,5 +389,12 @@
   .content-services {
     padding: 12px !important;
     font-size: 16px !important;
+  }
+
+}
+@media only screen and((min-height:800px)) {
+  .slide .column .row .slide-image {
+    width: 368px !important;
+    height: auto !important;
   }
 }
