@@ -519,6 +519,8 @@ section.people-opinion .people .slide-opinion {
 }
 section.people-opinion .people .slide-opinion .commenter p {
   font-size: 20px;
+  transform: scale(1.05);
+  color: #000;
 }
 section.people-opinion .people .slide-opinion::after {
   content: '"';
@@ -545,22 +547,26 @@ section.people-opinion .people .slide-opinion::before {
   background-color: #f6f6f6;
   height: 75px;
 }
+.slide-opinion .container.popup{
+    animation-name: popup;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    transition: all ease-in-out 1s;
+}
+section.people-opinion .people .slide-opinion .commenter{
+  position: relative;
+}
 section.people-opinion .people .slide-opinion .commenter img {
   width: 50px;
   border-radius: 50%;
   height: 50px;
-  margin-left: 12px;
   position: absolute;
-  top: 50px;
   color: var(--main-font-color);
 }
 section.people-opinion .people .slide-opinion .container {
-  padding: 20px;
   line-height: 2;
   color: #00000087;
   max-width: 500px;
-  display: flex;
-  justify-content: center;
 }
 section.people-opinion .people .slide-opinion .container .box-element {
   font-size: 20px;

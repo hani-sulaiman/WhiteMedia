@@ -171,6 +171,7 @@ var comments = {
 var delayComments = 0;
 commentInterval = setInterval(commenter, delayComments, (Counter_comment = 0));
 function commenter() {
+
   if (delayComments == 0) {
     delayComments = 12000;
     clearInterval(commentInterval);
@@ -184,10 +185,14 @@ function commenter() {
     clearInterval(commentInterval);
     commentInterval = setInterval(commenter, delayComments, (Counter_comment = 0));
   }
-  document.getElementById("img-person").src = comments[Counter_comment].imgPath;
-  document.querySelector(".commenter p").innerHTML =
-    comments[Counter_comment].name;
-  document.querySelector(".box-comment").innerHTML =
-    comments[Counter_comment].comment;
-  Counter_comment++;
+  setTimeout(()=>{
+    document.querySelector('.pop').classList.add('popup');
+    document.getElementById("img-person").src = comments[Counter_comment].imgPath;
+    document.querySelector(".commenter p").innerHTML =
+      comments[Counter_comment].name;
+    document.querySelector(".box-comment").innerHTML =
+      comments[Counter_comment].comment;
+      Counter_comment++;
+   },1000);
+  document.querySelector('.pop').classList.remove('popup');
 }
