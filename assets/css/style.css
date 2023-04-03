@@ -1,6 +1,10 @@
 /*Laptop Design*/
 :root {
   --main-font-color: #c48f56;
+  --font-size-heading-desktop:70px;
+  --font-size-content-desktop:30px;
+  --font-size-heading-mobile:40px;
+  --font-size-content-mobile:15px;
 }
 @font-face {
   font-family: "Gilroy";
@@ -57,10 +61,7 @@ body {
   z-index: 999;
   background-color: transparent;
 }
-.menu-open{
-  display: flex;
-  flex-direction: column;
-}
+
 .menu .container {
   display: flex;
   flex-direction: column;
