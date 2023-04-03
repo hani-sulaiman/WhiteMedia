@@ -125,45 +125,26 @@ document.querySelector(".hide-list").addEventListener("click", () => {
 });
 
 var services = document.querySelectorAll(".service");
-
-
-
-
-
-
-intervalService = setInterval(slideshowService, 7000, (x = 0));
+var delay=0;
+intervalService = setInterval(slideshowService, delay, (x = 0));
 function slideshowService() {
+  delay=9000;
   clickers = document.querySelectorAll(".service-button");
   if (x == services.length) {
     clearInterval(intervalService);
-    intervalService = setInterval(slideshowService, 7000, (x = 0));
+    intervalService = setInterval(slideshowService, delay, (x = 0));
   }
-  if (x == 0) {
-    clickers[x].classList.add("clicked");
-    clickers[x].click();
-    clickers[clickers.length - 1].classList.remove("clicked");
-  } else if (x == services.length) {
-    clickers[x].click();
-    clickers[x].classList.add("clicked");
-  } else {
-    clickers[x].click();
-    clickers[x].classList.add("clicked");
-    clickers[x - 1].classList.remove("clicked");
-  }
+  clickers[x].click();
   x++;
 }
-showService();
-function showService(){
-  var clickers = document.querySelectorAll(".service-button");
-  clickers.forEach((clicker,k) => {
-    clickers[k].addEventListener("click", () => {
-      for (y = 0; y < clickers.length; y++) {
-        clickers[y].classList.remove("clicked");
-        services[y].classList.remove("show-service");
-      }
-      clicker.classList.add("clicked");
-      services[k].classList.add("show-service");
-    });
+var clickers = document.querySelectorAll(".service-button");
+clickers.forEach((clicker, k) => {
+  clickers[k].addEventListener("click", () => {
+    for (y = 0; y < clickers.length; y++) {
+      clickers[y].classList.remove("clicked");
+      services[y].classList.remove("show-service");
+    }
+    clicker.classList.add("clicked");
+    services[k].classList.add("show-service");
   });
-   
-}
+});

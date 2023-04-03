@@ -227,10 +227,12 @@ body {
   display: flex;
   flex-direction: row;
   height: inherit;
+  justify-content: space-between;
 }
 .our-services .container-services .heading-services {
   padding: 20px;
   flex-basis: 45%;
+
 }
 .our-services .container-services .heading-services .title-services {
   padding-top: 50px;
@@ -247,7 +249,7 @@ body {
   animation-iteration-count: infinite;
   animation-direction: alternate;
   transition: all ease-in-out 1s;
-  width: 400px;
+  width: 450px;
   bottom: 30px;
   left: 60px;
   animation-timing-function: ease-in-out;
@@ -258,6 +260,12 @@ body {
   display: flex;
   padding: 20px;
   flex-wrap: wrap;
+  transition: all ease-in-out 0.5s;
+}
+.content-services {
+  color: #727272;
+  font-size: 22px;
+  transition: all ease-in-out 0.5s;
 }
 .our-services .container-services .viewer-services .service {
   display: none;
@@ -287,7 +295,7 @@ body {
   background-color: var(--main-font-color);
 }
 .viewer-services {
-  flex-basis: 65%;
+  flex-basis: 50%;
 }
 .service {
   padding: 70px;
