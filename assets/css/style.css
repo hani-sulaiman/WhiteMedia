@@ -41,7 +41,9 @@ body {
 .slider {
   height: 100vh !important;
 }
-
+.nav-transparent{
+  background-color: transparent !important;
+}
 .nav {
   display: flex;
   align-items: center;
@@ -54,15 +56,17 @@ body {
   z-index: 999;
   background-color: transparent;
 }
+
 .nav.scrolled-up {
   display: flex;
   transition: all ease-in-out 0.3s;
-  background-color: #f7f5e6f7 !important;
+  background-color: #f7f5e6f7;
 }
 .nav.scrolled-down {
   display: none;
   transition: all ease-in-out 0.3s;
 }
+
 .nav .logo {
   animation-name: logo;
   animation-duration: 1s;
