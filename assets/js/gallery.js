@@ -1,3 +1,4 @@
+function MainGallery(){
 $(function() {
     $(".img-w").each(function() {
       $(this).wrap("<div class='img-c'></div>")
@@ -36,4 +37,5 @@ $(function() {
     setTimeout(function() {
       copy.remove();
     }, 500)
-  })
+  });
+}

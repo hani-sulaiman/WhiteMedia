@@ -13,7 +13,7 @@
   <title>White Media</title>
 </head>
 
-<body class="hide">
+<body>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <div class="floating-container">
     <div class="floating-button">
@@ -141,7 +141,8 @@
     <div class="slide_viewer">
       <div class="slide_group">
         <div class="slide">
-          <video src="assets/files/camera.mp4" playsinline class="slide-video-1" width="100%" autoplay muted loop>
+          <video src="assets/files/camera.mp4" id="video-slide-1" playsinline class="video-slide" width="100%" autoplay muted loop>
+          <video src="assets/files/mobile.mp4" id="video-slide-2" playsinline class="video-slide" width="100%" autoplay muted loop>
         </div>
         <div class="slide">
           <div class="column">
@@ -166,7 +167,7 @@
           </div>
         </div>
         <div class="slide">
-          <video src="assets/files/A.mp4" playsinline width="100%" autoplay muted loop>
+          <video src="assets/files/A.mp4" class="video-slide" playsinline width="100%" autoplay muted loop>
         </div>
       </div>
     </div>
@@ -384,7 +385,6 @@
     <section class="people-opinion">
       <h2>What Our Clients Says</h2>
       <div class="people">
-        <img src="./assets/icons/message.png" width="600px" alt="">
         <div class="slide-opinion">
           <div class="container pop">
             <div class="commenter">
@@ -507,10 +507,11 @@
     </div>
   </footer>
   <script src="assets/js/main.js"></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="assets/js/gallery.js"></script>
   <script src="assets/js/slider.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </body>
 
 </html>

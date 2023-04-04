@@ -78,8 +78,8 @@
     margin: 10px;
   }
   section.people-opinion .people .slide-opinion {
-    padding: 50px;
-    max-width: 350px;
+    padding: 40px;
+    max-width: 188px;
   }
   .nav {
     height: 100px;
@@ -382,7 +382,7 @@
     margin: 0;
   }
   .our-services {
-    padding: 0px;
+    padding-left: 20px;
   }
   .our-services .container-services .heading-services .title-services {
     font-size: var(--font-size-heading-mobile);

@@ -16,9 +16,8 @@
   src: url("IMFellDWPica.ttf");
   font-weight: bold;
 }
-* {
+*{
   font-family: "Gilroy" !important ;
-  box-sizing: border-box;
 }
 body.hide {
   display: none;
@@ -48,6 +47,9 @@ body {
 }
 .nav-transparent {
   background-color: transparent !important;
+}
+.hide{
+  display: none;
 }
 .nav {
   display: flex;
@@ -110,6 +112,7 @@ body {
   color: rgb(240 240 240);
   text-decoration: none;
   opacity: 0;
+
 }
 .nav .social-media .quick-link {
   color: #de974c;
@@ -132,6 +135,7 @@ body {
   color: black;
   text-decoration: none;
   opacity: 0;
+  box-sizing: unset;
 }
 .nav .social-media :nth-child(1) {
   animation-delay: 0.5s;
@@ -344,8 +348,10 @@ section.some-works h2 {
   color: var(--main-font-color);
   font-size: 70px;
   z-index: 9;
-  text-shadow: 0px 0px 30px rgb(0, 0, 0);
+  text-shadow: 2px 2px 0px rgb(0, 0, 0);
+
 }
+
 .show-list,
 .hide-list {
   cursor: pointer;

@@ -1,16 +1,20 @@
-$('.slider').each(function() {
+function MainSlider() {
+  $('.slider').each(function() {
     var $this = $(this);
     var $group = $this.find('.slide_group');
     var $slides = $this.find('.slide');
     var bulletArray = [];
     var currentIndex = 0;
     var timeout;
-    var timing=15000;
-    
+    flag=0;
     function move(newIndex) {
+        document.querySelectorAll('video').forEach((vid)=>{
+          vid.currentTime=0;
+          vid.play();
+        });
       var animateLeft, slideLeft;
       
-      advance();
+      advance(newIndex);
       
       if ($group.is(':animated') || currentIndex === newIndex) {
         return;
@@ -44,10 +48,11 @@ $('.slider').each(function() {
           left: 0
         });
         currentIndex = newIndex;
+        flag++;
       });
     }
     
-    function advance() {
+    function advance(newIndex) {
       clearTimeout(timeout);
       timeout = setTimeout(function() {
         if (currentIndex < ($slides.length - 1)) {
@@ -58,7 +63,7 @@ $('.slider').each(function() {
         } else {
           move(0);
         }
-      }, timing);
+      }, vids[newIndex]);
     }
     
     $('.next_btn').on('click', function() {
@@ -85,41 +90,11 @@ $('.slider').each(function() {
       }
       $button.on('click', function() {
         move(index);
+
       }).appendTo('.slide_buttons');
       bulletArray.push($button);
     });
     
-    advance();
+    advance(0);
   });
-// var timing = 9000;
-// var SlideInterval = setInterval(clicker, timing);
-// function clicker() {
-
-//   var slides = document.querySelectorAll(".slider-navigation li a");
-//   arr = Array.from(slides);
-//   let node = arr.find((node) => node.classList.contains("is-active"));
-//   index = Number(node.dataset["index"]);
-//   if (index == slides.length - 1) {
-//     slides[0].click();
-//   } else {
-//     node = slides[index + 1].click();
-//     video.pause();
-//     setTimeout(()=>{
-//       video.currentTime=0;
-//       video.play();
-//     },2000);
-//   }
-// }
-// clickers = document.querySelectorAll(".slider-navigation li a");
-// const video = document.querySelector("video");
-// clickers.forEach((i) => {
-//   i.addEventListener("click", () => {
-//     clearInterval(SlideInterval);
-//     SlideInterval = setInterval(clicker, timing);
-//     video.pause();
-//     setTimeout(()=>{
-//       video.currentTime=0;
-//       video.play();
-//     },2000);
-//   });
-// });
+}
