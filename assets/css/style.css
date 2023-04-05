@@ -2,9 +2,10 @@
 :root {
   --main-font-color: #c48f56;
   --font-size-heading-desktop:70px;
-  --font-size-content-desktop:30px;
+  --font-size-content-desktop:25px;
   --font-size-heading-mobile:40px;
   --font-size-content-mobile:15px;
+  --card-size:200px;
 }
 @font-face {
   font-family: "Gilroy";
@@ -241,95 +242,84 @@ body {
 /*== Main Start ==*/
 /* Our Services Section Start */
 .our-services {
+  display: flex;
+  align-items: center;
   position: relative;
-  height: 100vh;
+  padding: 100px 0px 180px 0px;
   width: 100%;
   margin: 0;
-  padding: 20px;
   background-color: #eeeeee;
 }
 .our-services .container-services {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: inherit;
-  justify-content: space-between;
+  width: 100%;
 }
-.our-services .container-services .heading-services {
-  padding: 20px;
-  flex-basis: 45%;
-}
-.our-services .container-services .heading-services .title-services {
-  padding-top: 50px;
-  font-size: 80px;
-  text-transform: capitalize;
-  color: var(--main-font-color);
-}
-.our-services .container-services .heading-services .content-services {
-  padding: 10px;
-  padding-left: 20px;
-}
-.our-services .container-services .heading-services img {
-  animation-name: ourServicesIcons;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  transition: all ease-in-out 1s;
-  width: 450px;
-  bottom: 30px;
-  left: 60px;
-  animation-timing-function: ease-in-out;
-  animation-duration: 1s;
-  position: absolute;
-}
-.our-services .container-services .heading-services .service-picker {
+.our-services .container-services .heading-services{
   display: flex;
-  padding: 20px;
+  flex-direction: column;
+  margin-left: 40px
+}
+.our-services .container-services .heading-services .title-services{
+   font-size: var(--font-size-heading-desktop);
+   color: var(--main-font-color);
+}
+.our-services .container-services .heading-services .content-services{
+   font-size: var(--font-size-content-desktop);
+   color: #727272;
+   height: 100px;
+   width: 100%;
+}
+.our-services .container-services .cards-services{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.our-services .container-services .cards-services .card{
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(0);
   transition: all ease-in-out 0.5s;
 }
-.content-services {
+.our-services .container-services .cards-services .card:hover{
+  transform: translateY(-5px);
+  transition: all ease-in-out 0.5s;
+}
+.our-services .container-services .cards-services .card a{
+  text-decoration: none;
+}
+.our-services .container-services .cards-services .card a .head-card{
+  width: var(--card-size);
+  position: relative;
+  height: calc(var(--card-size) / 3 + var(--card-size));
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('../icons/card.png');
+}
+.our-services .container-services .cards-services .card a .head-card img{
+  position: relative;
+  top: 21%;
+  left: 7%;
+  width: calc(var(--card-size) / 6 + var(--card-size));
+}
+.our-services .container-services .cards-services .card a .content-card{
+  width: inherit;
+  text-align: center;
+}
+
+.our-services .container-services .cards-services .card a .content-card .title{
+  font-size: 30px;
+  margin: 0;
+  color: #000;
+}
+.our-services .container-services .cards-services .card a .content-card .subtitle{
+  font-size: 20px;
+  margin: 0;
   color: #727272;
-  font-size: 22px;
-  transition: all ease-in-out 0.5s;
-}
-.our-services .container-services .viewer-services .service {
-  display: none;
-}
-.show-service {
-  position: relative;
-  animation-name: service;
-  animation-timing-function: ease-out;
-  animation-duration: 1s;
-  display: block !important;
-  position: relative;
-  transition: all ease-in-out 1s;
-}
-.our-services .container-services .heading-services .service-picker button {
-  background-color: transparent;
-  font-size: 18px;
-  border: 3px solid var(--main-font-color);
-  padding: 20px;
-  margin: 4px;
-  cursor: pointer;
-}
-.our-services
-  .container-services
-  .heading-services
-  .service-picker
-  button.clicked {
-  background-color: var(--main-font-color);
-}
-.viewer-services {
-  flex-basis: 50%;
-}
-.service {
-  padding: 70px;
-  position: relative;
-}
-.service h3 {
-  font-size: 50px;
-}
-.service img {
-  width: 350px;
 }
 /* Our Services Section END */
 

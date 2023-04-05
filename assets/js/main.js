@@ -1,5 +1,18 @@
-var vids = [];
+var SlidesTime = [];
+var videos=document.querySelectorAll('video');
+var slides=document.querySelectorAll('.slide');
+
+function getVideosDurations(){
+  document.querySelectorAll(".slide").forEach((element) => {
+    if (element.querySelector("video")) {
+      SlidesTime.push(element.querySelector("video").duration * 1000);
+    } else {
+      SlidesTime.push(7000);
+    }
+  });
+}
 function Main() {
+  getVideosDurations();
   video1 = document.querySelector("#video-slide-1");
   video2 = document.querySelector("#video-slide-2");
   if (window.innerWidth <= 800) {
@@ -9,14 +22,8 @@ function Main() {
     video2.classList.add('hide');
     video1.classList.remove('hide');
   }
-  document.querySelectorAll(".slide").forEach((element) => {
-    if (element.querySelector("video")) {
-      vids.push(element.querySelector("video").duration * 1000);
-    } else {
-      vids.push(7000);
-    }
-  });
-  console.log(vids);
+
+  console.log(SlidesTime);
   document.querySelector(".nav").classList.remove("scrolled");
 
   if (
@@ -55,6 +62,7 @@ function Main() {
     } else {
       document.querySelector(".slide-video-1").src = "assets/files/camera.mp4";
     }
+    getVideosDurations();
   });
   var menu = document.querySelector(".menu");
   var menuOpen = document.querySelector(".menu-open");
@@ -137,30 +145,7 @@ function Main() {
     document.querySelector(".show-list").classList.add("show-button");
   });
 
-  var services = document.querySelectorAll(".service");
-  var delay = 0;
-  intervalService = setInterval(slideshowService, delay, (x = 0));
-  function slideshowService() {
-    delay = 9000;
-    clickers = document.querySelectorAll(".service-button");
-    if (x == services.length) {
-      clearInterval(intervalService);
-      intervalService = setInterval(slideshowService, delay, (x = 0));
-    }
-    clickers[x].click();
-    x++;
-  }
-  var clickers = document.querySelectorAll(".service-button");
-  clickers.forEach((clicker, k) => {
-    clickers[k].addEventListener("click", () => {
-      for (y = 0; y < clickers.length; y++) {
-        clickers[y].classList.remove("clicked");
-        services[y].classList.remove("show-service");
-      }
-      clicker.classList.add("clicked");
-      services[k].classList.add("show-service");
-    });
-  });
+
   var comments = {
     0: {
       name: "person1",
