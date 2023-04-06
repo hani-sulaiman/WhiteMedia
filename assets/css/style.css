@@ -278,7 +278,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.our-services .container-services .cards-services .card{
+.our-services .container-services .cards-services .container .card{
   margin: 5px;
   display: flex;
   flex-direction: column;
