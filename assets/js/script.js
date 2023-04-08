@@ -1,6 +1,3 @@
-function includeJS (incFile) { 
-    document.querySelector('body').write ('<script type=\"text/javascript\" src=\"'+ incFile+ '\"></script>'); 
-}
 stopVideos();
 window.onload=()=>{
     document.querySelector('.logo').classList.add('zoom');
@@ -12,5 +9,6 @@ window.onload=()=>{
         Main();
         MainGallery();
         MainSlider();  
+        scroll();
     },600);   
 }
