@@ -40,6 +40,10 @@
   background-image: url(../svg/logo.svg);
   transition: all ease-in-out 1s;
 }
+.logo.zoom{
+  animation-name: zoom;
+  animation-duration: 1s;
+}
 html,
 body {
   background: #f7f5e6;
@@ -78,6 +82,7 @@ main > section{
 .body.hide{
   visibility: hidden;
 }
+
 .nav {
   display: flex;
   align-items: center;

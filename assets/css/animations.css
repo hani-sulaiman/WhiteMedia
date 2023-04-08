@@ -8,6 +8,16 @@
      opacity: 1;
   }
 }
+@keyframes zoom {
+  0%{
+    opacity: 1;
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(3);
+     opacity: 0;
+  }
+}
 
 
 @keyframes title {
