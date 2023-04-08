@@ -75,6 +75,9 @@ main > section{
 .hide{
   display: none;
 }
+.body.hide{
+  visibility: hidden;
+}
 .nav {
   display: flex;
   align-items: center;
