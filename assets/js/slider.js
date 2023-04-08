@@ -85,8 +85,7 @@ function MainSlider() {
       }, SlidesTime[newIndex]);
     }
 
-    $(".next_btn").on("click", function () {      
-      playVideos(0);
+    $(".next_btn").on("click", function () {
       if (currentIndex < $slides.length - 1) {
         move(currentIndex + 1);
       } else {
@@ -95,7 +94,6 @@ function MainSlider() {
     });
 
     $(".previous_btn").on("click", function () {
-      playVideos(0);
       if (currentIndex !== 0) {
         move(currentIndex - 1);
       } else {

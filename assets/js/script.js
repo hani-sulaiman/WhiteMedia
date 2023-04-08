@@ -4,6 +4,8 @@ function includeJS (incFile) {
 stopVideos();
 window.onload=()=>{
     setTimeout(()=>{
+        document.querySelector('.body').classList.remove('hide');
+        document.querySelector('.load').classList.add('hide');
         Main();
         MainGallery();
         MainSlider();  

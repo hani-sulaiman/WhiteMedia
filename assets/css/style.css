@@ -20,8 +20,25 @@
 *{
   font-family: "Gilroy" !important ;
 }
-body.hide {
-  display: none;
+.load{
+  height: 100vh;
+  width: 100%;
+  background: #f7f5e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.load .logo{
+  animation-name: loading;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  width: 300px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-image: url(../svg/logo.svg);
+  transition: all ease-in-out 1s;
 }
 html,
 body {
@@ -31,7 +48,13 @@ body {
   padding: 0;
   width: calc(100% + 0.6px);
 }
-
+main {
+  scroll-snap-type: y mandatory;
+}
+main > section{
+  width: 100%;
+  scroll-snap-align:start;
+}
 /* Head Start */
 .menu {
   top: 0;
