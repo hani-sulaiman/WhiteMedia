@@ -16,6 +16,9 @@
 
 
 @media only screen and (max-width: 737px) {
+  *{
+    box-sizing: border-box;
+  }
   .slide video {
     height: 100vh !important;
     width: auto;
