@@ -720,7 +720,7 @@
   }
 
   .main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(1) label .content {
-    width: 90px;
+    width: 97px;
     height: 140px;
   }
 
@@ -734,7 +734,7 @@
 
   .main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(2) label .content,
   .main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(3) label .content {
-    max-width: 92px;
+    max-width: 97px;
   }
 
   .main .container .sign form .viewer .step:nth-child(4) .row:nth-child(2) span {
