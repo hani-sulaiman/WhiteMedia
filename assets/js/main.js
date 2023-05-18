@@ -1,8 +1,8 @@
 var SlidesTime = [];
-var videos=document.querySelectorAll('video');
-var slides=document.querySelectorAll('.slide');
+var videos = document.querySelectorAll("video");
+var slides = document.querySelectorAll(".slide");
 
-function getVideosDurations(){
+function getVideosDurations() {
   document.querySelectorAll(".slide").forEach((element) => {
     if (element.querySelector("video")) {
       SlidesTime.push(element.querySelector("video").duration * 1000);
@@ -12,19 +12,21 @@ function getVideosDurations(){
   });
 }
 function Main() {
-  getVideosDurations();
+    getVideosDurations();
   video1 = document.querySelector("#video-slide-1");
   video2 = document.querySelector("#video-slide-2");
-  if (window.innerWidth <= 800) {
-    video2.classList.remove('hide');
-    video1.classList.add('hide');
-  } else {
-    video2.classList.add('hide');
-    video1.classList.remove('hide');
+  if (video1) {
+    if (window.innerWidth <= 800) {
+      video2.classList.remove("hide");
+      video1.classList.add("hide");
+    } else {
+      video2.classList.add("hide");
+      video1.classList.remove("hide");
+    }
   }
-
-  console.log(SlidesTime);
-  document.querySelector(".nav").classList.remove("scrolled");
+  if (document.querySelector(".nav")) {
+    document.querySelector(".nav").classList.remove("scrolled");
+  }
 
   if (
     navigator.userAgent.indexOf("Safari") != -1 &&
@@ -39,19 +41,21 @@ function Main() {
   window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
     var navbar = document.querySelector(".nav");
-    if (window.pageYOffset < 100) {
-      navbar.classList.remove("scrolled-up");
-      navbar.classList.add("nav-transparent");
-    }
-    if (prevScrollpos >= currentScrollPos) {
-      // When the user scrolls up, hide the navigation bar
-      navbar.classList.remove("scrolled-down");
-      navbar.classList.add("scrolled-up");
-    } else if (prevScrollpos < currentScrollPos) {
-      navbar.classList.remove("nav-transparent");
-      // When the user scrolls down, show the navigation bar
-      navbar.classList.add("scrolled-down");
-      navbar.classList.remove("scrolled-up");
+    if (navbar) {
+      if (window.pageYOffset < 100) {
+        navbar.classList.remove("scrolled-up");
+        navbar.classList.add("nav-transparent");
+      }
+      if (prevScrollpos >= currentScrollPos) {
+        // When the user scrolls up, hide the navigation bar
+        navbar.classList.remove("scrolled-down");
+        navbar.classList.add("scrolled-up");
+      } else if (prevScrollpos < currentScrollPos) {
+        navbar.classList.remove("nav-transparent");
+        // When the user scrolls down, show the navigation bar
+        navbar.classList.add("scrolled-down");
+        navbar.classList.remove("scrolled-up");
+      }
     }
     prevScrollpos = currentScrollPos;
   };
@@ -68,18 +72,26 @@ function Main() {
   var menuOpen = document.querySelector(".menu-open");
   var menuClose = document.querySelector(".menu-close");
   var isOpen = false;
-  menuOpen.addEventListener("click", () => {
-    if (!isOpen) {
-      menu.classList.add("show-menu");
-      isOpen = !isOpen;
-    }
-  });
-  menuClose.addEventListener("click", () => {
-    if (isOpen) {
-      menu.classList.remove("show-menu");
-      isOpen = !isOpen;
-    }
-  });
+  if (menuOpen) {
+    menuOpen.addEventListener("click", () => {
+      if (!isOpen) {
+        menu.classList.add("show-menu");
+        isOpen = !isOpen;
+      }
+    });
+  }
+  if (menuClose) {
+    menuClose.addEventListener("click", () => {
+      if (isOpen) {
+        menu.classList.add('close-menu-animation')
+        setTimeout(()=>{
+          menu.classList.remove("show-menu");
+          menu.classList.remove('close-menu-animation')
+        },500);
+        isOpen = !isOpen;
+      }
+    });
+  }
   text = [
     "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet fuga commodi asperiores saepe labore totam perspiciatis ut sunt at vero, voluptatem quis, tenetur quibusdam excepturi dolorum, amet dicta. Voluptates, animi.",
   ];
@@ -131,21 +143,22 @@ function Main() {
     });
     i++;
   });
-  document.querySelector(".show-list").addEventListener("click", () => {
-    document.querySelector(".some-works").classList.add("flexing");
-    document.querySelector(".gallery").classList.remove("overflow-list");
-    document.querySelector(".hide-list").classList.add("show-button");
-    document.querySelector(".show-list").classList.remove("show-button");
-  });
-
-  document.querySelector(".hide-list").addEventListener("click", () => {
-    document.querySelector(".some-works").classList.remove("flexing");
-    document.querySelector(".gallery").classList.add("overflow-list");
-    document.querySelector(".hide-list").classList.remove("show-button");
-    document.querySelector(".show-list").classList.add("show-button");
-  });
-
-
+  if (document.querySelector(".show-list")) {
+    document.querySelector(".show-list").addEventListener("click", () => {
+      document.querySelector(".some-works").classList.add("flexing");
+      document.querySelector(".gallery").classList.remove("overflow-list");
+      document.querySelector(".hide-list").classList.add("show-button");
+      document.querySelector(".show-list").classList.remove("show-button");
+    });
+  }
+  if (document.querySelector(".hide-list")) {
+    document.querySelector(".hide-list").addEventListener("click", () => {
+      document.querySelector(".some-works").classList.remove("flexing");
+      document.querySelector(".gallery").classList.add("overflow-list");
+      document.querySelector(".hide-list").classList.remove("show-button");
+      document.querySelector(".show-list").classList.add("show-button");
+    });
+  }
   var comments = {
     0: {
       name: "person1",
@@ -190,16 +203,20 @@ function Main() {
         (Counter_comment = 0)
       );
     }
-    setTimeout(() => {
-      document.querySelector(".pop").classList.add("popup");
-      document.getElementById("img-person").src =
-        comments[Counter_comment].imgPath;
-      document.querySelector(".commenter p").innerHTML =
-        comments[Counter_comment].name;
-      document.querySelector(".box-comment").innerHTML =
-        comments[Counter_comment].comment;
-      Counter_comment++;
-    }, 1000);
-    document.querySelector(".pop").classList.remove("popup");
+    if (document.querySelector(".pop")) {
+      setTimeout(() => {
+        document.querySelector(".pop").classList.add("popup");
+        document.getElementById("img-person").src =
+          comments[Counter_comment].imgPath;
+        document.querySelector(".commenter p").innerHTML =
+          comments[Counter_comment].name;
+        document.querySelector(".box-comment").innerHTML =
+          comments[Counter_comment].comment;
+        Counter_comment++;
+      }, 1000);
+    }
+    if (document.querySelector(".pop")) {
+      document.querySelector(".pop").classList.remove("popup");
+    }
   }
 }

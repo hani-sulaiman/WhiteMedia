@@ -34,9 +34,9 @@ body{
 }
 
 .slide_buttons {
-  bottom: -2px;
+  bottom: 38px;
   left: 0;
-  position: absolute;
+  position: relative;
   right: 0;
   text-align: center;
 }
@@ -67,7 +67,7 @@ a.slide_btn {
   left: 100px;
   margin: auto;
   position: absolute;
-  top: 0;
+  top: -105px;
 }
 
 .next_btn {
@@ -75,9 +75,12 @@ a.slide_btn {
   margin: auto;
   position: absolute;
   right: 100px;
-  top: 0;
+  top: -105px;
 }
-
+.next_btn i ,.previous_btn i{
+  color: var(--main-font-color);
+  font-size:40px;
+}
 .previous_btn, .next_btn {
   cursor: pointer;
   height: 65px;
@@ -96,11 +99,11 @@ a.slide_btn {
 
 @media only screen and (max-width: 767px) {
   .previous_btn {
-    left: 25px;
+    left: 12px;
     top: 33px;
   }
   .next_btn {
-    left: -78px;
+    left: -33px;
     top: 33px;
   }
 }
