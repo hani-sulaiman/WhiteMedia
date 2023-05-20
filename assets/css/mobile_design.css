@@ -824,6 +824,18 @@
     padding: 26px;
     max-width: 301px;
 }
+.contactus-section .container .photo img{
+  height: 220px;
+}
+.contactus-section .container form{
+  height: 390px;
+}
+header.about-page .mask .container h1, header.contact-page .mask .container h1{
+  font-size: 50px;
+}
+.contactus-section h1{
+  font-size: 30px;
+}
 }
 
 @media only screen and ((min-width: 390px) and (max-width: 750px)) {
