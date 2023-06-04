@@ -1,14 +1,7 @@
-stopVideos();
-window.onload=()=>{
-    document.querySelector('.logo').classList.add('zoom');
-    setTimeout(()=>{
-        document.querySelector('.body').classList.remove('hide');
-        document.querySelector('.load').classList.add('hide');
-    },800);   
-    setTimeout(()=>{
-        Main();
-        MainGallery();
-        MainSlider();  
-        scroll();
-    },600);   
-}
+window.onload = () => {
+  document.querySelector(".logo").classList.add("zoom");
+  setTimeout(() => {
+    document.querySelector(".body").classList.remove("hide");
+    document.querySelector(".load").classList.add("hide");
+  }, 800);
+};

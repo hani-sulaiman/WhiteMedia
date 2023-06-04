@@ -5,7 +5,7 @@
   --font-size-content-desktop: 20px;
   --font-size-heading-mobile: 35px;
   --font-size-content-mobile: 12px;
-  --card-size: 200px;
+  --card-size: 165px;
 }
 
 @font-face {
@@ -60,6 +60,7 @@
 
 html,
 body {
+  overflow-x: hidden;
   background: #f7f5e6;
   height: 100%;
   margin: 0;
@@ -126,7 +127,7 @@ body {
   padding: 40px;
   padding-top: 10px;
 }
-.menu.close-menu-animation{
+.menu.close-menu-animation {
   animation-name: close-menu;
   animation-duration: 0.2s;
   animation-fill-mode: forwards;
@@ -154,12 +155,12 @@ body {
   animation-name: logo;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  flex-basis: 50%;
+  flex-basis: 30%;
   padding: 16px;
 }
 
 .nav .social-media {
-  flex-basis: 50%;
+  flex-basis: 69%;
   display: flex;
   justify-content: end;
 }
@@ -353,7 +354,7 @@ body {
 .our-services .container-services .heading-services {
   display: flex;
   flex-direction: column;
-  margin-left: 40px;
+  margin-left: 100px;
 }
 
 .our-services .container-services .heading-services .title-services {
@@ -376,27 +377,27 @@ body {
   justify-content: space-evenly;
 }
 
-.our-services .container-services .cards-services .card {
+.our-services .container-services .cards-services .card-service {
   transform: translateY(0px);
   transition: all ease-in-out 0.5s;
 }
 
-.our-services .container-services .cards-services .card .container {
+.our-services .container-services .cards-services .card-service .container {
   margin: 5px;
   display: flex;
   flex-direction: column;
 }
 
-.our-services .container-services .cards-services .card:hover {
+.our-services .container-services .cards-services .card-service:hover {
   transform: translateY(-5px);
   transition: all ease-in-out 0.5s;
 }
 
-.our-services .container-services .cards-services .card a {
+.our-services .container-services .cards-services .card-service a {
   text-decoration: none;
 }
 
-.our-services .container-services .cards-services .card a .head-card {
+.our-services .container-services .cards-services .card-service a .head-card {
   width: var(--card-size);
   position: relative;
   height: calc(var(--card-size) / 3 + var(--card-size));
@@ -405,25 +406,48 @@ body {
   background-image: url("../icons/card.png");
 }
 
-.our-services .container-services .cards-services .card a .head-card img {
+.our-services
+  .container-services
+  .cards-services
+  .card-service
+  a
+  .head-card
+  img {
   position: relative;
-  top: 21%;
-  left: 7%;
-  width: calc(var(--card-size) / 6 + var(--card-size));
+  top: 18%;
+  left: 11%;
+  width: 145px;
 }
 
-.our-services .container-services .cards-services .card a .content-card {
+.our-services
+  .container-services
+  .cards-services
+  .card-service
+  a
+  .content-card {
   width: inherit;
   text-align: center;
 }
 
-.our-services .container-services .cards-services .card a .content-card .title {
+.our-services
+  .container-services
+  .cards-services
+  .card-service
+  a
+  .content-card
+  .title {
   font-size: 30px;
   margin: 0;
   color: #000;
 }
 
-.our-services .container-services .cards-services .card a .content-card .subtitle {
+.our-services
+  .container-services
+  .cards-services
+  .card-service
+  a
+  .content-card
+  .subtitle {
   font-size: 20px;
   margin: 0;
   color: #727272;
@@ -433,8 +457,9 @@ body {
 
 /* Some Works Section START */
 section.some-works {
+  background-color: #000;
   position: relative;
-  height: 100vh;
+  height: auto;
 }
 
 section.some-works.flexing {
@@ -443,37 +468,40 @@ section.some-works.flexing {
 
 section.some-works h2 {
   position: absolute;
-  top: 20px;
-  left: 40px;
+  top: -80px;
+  left: 50%;
+  transform: translateX(-50%);
   color: var(--main-font-color);
   font-size: 70px;
   z-index: 9;
   text-shadow: 2px 2px 0px rgb(0, 0, 0);
 }
-section.some-works *{
+section.some-works * {
   transition: 0.2s;
 }
-.gallery{
+.gallery {
+  justify-content: flex-start;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   height: 100%;
 }
-.gallery a{
-  height: 200px;
-  width: 300px;
+.gallery a {
   overflow: hidden;
+  width: 25%;
+  height: 300px;
 }
-.gallery a img{
-  height: 100%;
+.gallery a img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
-.gallery a img:hover{
+.gallery a img:hover {
   transform: scale(1.4);
+}
+.clear {
+  clear: both;
 }
 /* Some Works Section END */
 
@@ -510,7 +538,7 @@ section.order .column a {
   background-color: var(--main-font-color);
   padding: 20px 30px 20px 25px;
   font-size: 25px;
-  width: 150px;
+  width: 190px;
   margin-left: 44px;
   margin-top: 20px;
   color: #fff;
@@ -518,7 +546,9 @@ section.order .column a {
 }
 
 section.order .column:nth-child(1) {
-  flex-basis: 40%;
+  flex-basis:35%;
+  margin-top: 50px;
+  margin-left: 50px;
 }
 
 section.order .column:nth-child(2) {
@@ -533,7 +563,7 @@ section.order .column:nth-child(2) {
 section.order .column .card {
   cursor: pointer;
   border: 3px solid transparent;
-  margin: 10px;
+  margin: 20px;
   border-radius: 7px;
   width: 190px;
   height: auto;
@@ -562,7 +592,7 @@ section.order .column .card img {
 
 /* People Opinion Section START */
 section.people-opinion {
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   background: #f6f6f6;
@@ -571,7 +601,8 @@ section.people-opinion {
 section.people-opinion h2 {
   font-size: 70px;
   color: var(--main-font-color);
-  padding-left: 40px;
+  margin-left: 100px;
+  margin-top: 75px;
 }
 
 section.people-opinion .people {
@@ -589,7 +620,7 @@ section.people-opinion .people img {
 section.people-opinion .people .slide-opinion {
   position: absolute;
   z-index: 2;
-  top: 0;
+  top: 100px;
   padding: 90px;
   max-width: 700px;
   border-radius: 20px;
@@ -721,6 +752,7 @@ footer .container-footer .column.touch .container div p {
 
 footer .container-footer .column.touch .container div {
   display: flex;
+  align-items: center;
 }
 
 footer .container-footer .column.touch .container .icon {
@@ -729,6 +761,12 @@ footer .container-footer .column.touch .container .icon {
   padding: 10px;
 }
 
+footer .container-footer > div > h3 {
+  margin-top: 10px !important;
+}
+footer .container-footer .column.touch .container div p{
+  margin: 0;
+}
 footer .container-footer .column.touch .container a {
   color: var(--main-font-color);
   margin-left: 12px;
@@ -736,7 +774,10 @@ footer .container-footer .column.touch .container a {
   color: #000;
   width: 100px;
 }
-
+#map {
+  height: 400px; /* The height is 400 pixels */
+  width: 100%; /* The width is the width of the web page */
+}
 footer .container-footer .column.services h3 {
   font-size: 30px;
   color: #eeeeee;
@@ -766,7 +807,6 @@ footer .container-footer .column.tags h3 {
 footer .container-footer .column.tags .container {
   display: flex;
   flex-wrap: wrap;
-  width: 200px;
 }
 
 footer .container-footer .column.tags .container a {
@@ -774,7 +814,7 @@ footer .container-footer .column.tags .container a {
   border: 2px solid #7f7f7f;
   margin: 2px;
   color: #7f7f7f;
-  padding: 20px;
+  padding: 5px;
 }
 
 footer .container-footer .column.tags .container a:hover {
@@ -862,9 +902,11 @@ header .column img {
   display: flex;
   justify-content: center;
   background: rgb(189, 105, 11);
-  background: linear-gradient(90deg,
-      rgba(189, 105, 11, 1) 33%,
-      rgba(197, 149, 96, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(189, 105, 11, 1) 33%,
+    rgba(197, 149, 96, 1) 100%
+  );
   width: 100%;
   height: 70vh;
 }
@@ -999,7 +1041,7 @@ header.contact-page .mask .container h1 {
   flex-wrap: wrap;
 }
 
-.who-us .container>.column-1 {
+.who-us .container > .column-1 {
   margin: 30px;
   margin-top: 0;
   flex-basis: 33%;
@@ -1007,22 +1049,22 @@ header.contact-page .mask .container h1 {
   flex-direction: column;
 }
 
-.who-us .container>.column-2 {
+.who-us .container > .column-2 {
   flex-basis: 60%;
 }
 
-.who-us .container>.column-2 img {
+.who-us .container > .column-2 img {
   height: 100%;
 }
 
-.who-us .container>.column-1 h2 {
+.who-us .container > .column-1 h2 {
   margin: 0;
   font-size: 3rem;
   line-height: 1.2;
   font-family: "Montserrat" !important;
 }
 
-.who-us .container>.column-1 p {
+.who-us .container > .column-1 p {
   color: #6f6f6f;
   font-size: 1rem;
   font-weight: 500;
@@ -1068,8 +1110,8 @@ header.contact-page .mask .container h1 {
   flex-direction: column;
 }
 
-.who-us>div>.column-1>div>.row-1>.column-1 i,
-.who-us>div>.column-1>div>.row-2>.column-1 i {
+.who-us > div > .column-1 > div > .row-1 > .column-1 i,
+.who-us > div > .column-1 > div > .row-2 > .column-1 i {
   color: var(--main-font-color);
   font-size: 35px;
 }
@@ -1228,7 +1270,7 @@ body.qouta {
   box-shadow: 3px 3px 3px rgb(47 47 47 / 10%);
 }
 
-.main>.container {
+.main > .container {
   width: 100%;
   height: 85vh;
   display: flex;
@@ -1236,9 +1278,11 @@ body.qouta {
 
 .main .container .sidebar {
   border-radius: 5px 0 0 5px;
-  background: linear-gradient(135deg,
-      hsla(31, 65%, 63%, 1) 0%,
-      hsla(31, 48%, 55%, 1) 100%);
+  background: linear-gradient(
+    135deg,
+    hsla(31, 65%, 63%, 1) 0%,
+    hsla(31, 48%, 55%, 1) 100%
+  );
   display: flex;
   flex-direction: column;
   flex: 30%;
@@ -1400,7 +1444,16 @@ body.qouta {
   justify-content: space-evenly;
 }
 
-.main .container .sign form .viewer .step .row:nth-child(2) .column .field label {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step
+  .row:nth-child(2)
+  .column
+  .field
+  label {
   font-size: 15px;
   font-weight: 500;
   font-family: "Montserrat" !important;
@@ -1408,7 +1461,16 @@ body.qouta {
   line-height: 2;
 }
 
-.main .container .sign form .viewer .step .row:nth-child(2) .column .field input {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step
+  .row:nth-child(2)
+  .column
+  .field
+  input {
   width: 250px;
   height: 30px;
   font-family: "Montserrat" !important;
@@ -1504,11 +1566,31 @@ body.qouta {
   font-family: "Montserrat" !important;
 }
 
-.main .container .sign form .viewer .step .row .card label [type="checkbox"]+.content {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step
+  .row
+  .card
+  label
+  [type="checkbox"]
+  + .content {
   cursor: pointer;
 }
 
-.main .container .sign form .viewer .step .row .card label [type="checkbox"]:checked+.content {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step
+  .row
+  .card
+  label
+  [type="checkbox"]:checked
+  + .content {
   outline: 2px solid #4484fd;
 }
 
@@ -1518,8 +1600,22 @@ body.qouta {
   appearance: textfield;
 }
 
-.main .container .sign form .viewer .step .row input[type=number]::-webkit-inner-spin-button,
-.main .container .sign form .viewer .step .row input[type=number]::-webkit-outer-spin-button {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step
+  .row
+  input[type="number"]::-webkit-inner-spin-button,
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step
+  .row
+  input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
 }
 
@@ -1536,7 +1632,7 @@ body.qouta {
 }
 
 .main .container .sign form .viewer .step .row .number-input button {
-  outline:none;
+  outline: none;
   -webkit-appearance: none;
   background-color: transparent;
   border: none;
@@ -1553,7 +1649,7 @@ body.qouta {
 .main .container .sign form .viewer .step .row .number-input button:after {
   display: inline-block;
   position: absolute;
-  content: '';
+  content: "";
   width: 1rem;
   height: 2px;
   background-color: var(--main-font-color);
@@ -1563,10 +1659,18 @@ body.qouta {
   transform: translate(-50%, -50%) rotate(90deg);
 }
 
-.main .container .sign form .viewer .step .row .number-input input[type=number] {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step
+  .row
+  .number-input
+  input[type="number"] {
   font-family: sans-serif;
   max-width: 3rem;
-  padding: .5rem;
+  padding: 0.5rem;
   color: var(--main-font-color);
   border: solid #ddd;
   border-width: 0 2px;
@@ -1575,135 +1679,313 @@ body.qouta {
   font-weight: 500;
   text-align: center;
 }
-.main .container .sign form .viewer .step:nth-child(2) .row .column .row .container input[type="checkbox"]{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(2)
+  .row
+  .column
+  .row
+  .container
+  input[type="checkbox"] {
   background-color: var(--main-font-color);
   border-color: var(--main-font-color);
   width: 14px;
   height: 14px;
   cursor: pointer;
 }
-.main .container .sign form .viewer .step:nth-child(2) .row{
+.main .container .sign form .viewer .step:nth-child(2) .row {
   display: flex;
 }
-.main .container .sign form .viewer .step:nth-child(2) .row:nth-child(2){
+.main .container .sign form .viewer .step:nth-child(2) .row:nth-child(2) {
   padding-left: 50px;
 }
-.main .container .sign form .viewer .step:nth-child(2) .row:nth-child(3){
+.main .container .sign form .viewer .step:nth-child(2) .row:nth-child(3) {
   padding-left: 98px;
-
 }
-.main .container .sign form .viewer .step:nth-child(2) .row:nth-child(3) .row{
+.main .container .sign form .viewer .step:nth-child(2) .row:nth-child(3) .row {
   padding: 0;
 }
-.main .container .sign form .viewer .step .row .column .row{
-display: flex;
-flex-direction: row;
+.main .container .sign form .viewer .step .row .column .row {
+  display: flex;
+  flex-direction: row;
 }
-.main .container .sign form .viewer .step .row .column .row:nth-child(2){
+.main .container .sign form .viewer .step .row .column .row:nth-child(2) {
   justify-content: flex-start;
   flex-direction: column;
   align-items: flex-start;
-  height:auto;
+  height: auto;
 }
-.main .container .sign form .viewer .step:nth-child(2) .row .column{
+.main .container .sign form .viewer .step:nth-child(2) .row .column {
   justify-content: start;
   align-items: flex-start;
 }
-.main .container .sign form .viewer .step .row .column p{
+.main .container .sign form .viewer .step .row .column p {
   font-family: "Montserrat" !important;
   font-size: 13px;
   font-weight: 600;
   color: #727272;
 }
-.main .container .sign form .viewer .step .row .column textarea{
+.main .container .sign form .viewer .step .row .column textarea {
   font-family: "Montserrat" !important;
   font-size: 16px;
   text-indent: 5px;
   border: 2px solid #dddddd;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(1) label .content p{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(1)
+  label
+  .content
+  p {
   font-size: 14px;
   color: #343434;
   font-weight: 600;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row{
+.main .container .sign form .viewer .step:nth-child(3) .row {
   display: flex;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column{
+.main .container .sign form .viewer .step:nth-child(3) .row .column {
   display: flex;
   flex-direction: column;
   height: 350px;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(1) label .content {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(1)
+  label
+  .content {
   width: 180px;
   height: 180px;
   justify-content: center;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(1) label .content .card:nth-child(2){
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(1)
+  label
+  .content
+  .card:nth-child(2) {
   width: 200px;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(1) label .content img {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(1)
+  label
+  .content
+  img {
   height: 110px;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(2) 
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(3)  {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(2)
+  .main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(3) {
   cursor: pointer;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(2) label .content,
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(3) label .content{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(2)
+  label
+  .content,
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(3)
+  label
+  .content {
   width: 160px;
   padding: 10px;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(2) label .content .container p,
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(3) label .content .container p{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(2)
+  label
+  .content
+  .container
+  p,
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(3)
+  label
+  .content
+  .container
+  p {
   font-size: 13px;
   color: #343434;
   font-weight: 600;
   margin: 0;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(2) label .content .container,
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(3) label .content .container
-{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(2)
+  label
+  .content
+  .container,
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(3)
+  label
+  .content
+  .container {
   display: flex;
   width: 90%;
   justify-content: space-between;
   align-items: center;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(2) label .content .container input ,
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(3) label .content .container input{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(2)
+  label
+  .content
+  .container
+  input,
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(3)
+  label
+  .content
+  .container
+  input {
   opacity: 1;
   position: relative;
   width: 16px;
   height: 16px;
 }
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(2) label .content > p ,
-.main .container .sign form .viewer .step:nth-child(3) .row .column .card:nth-child(3) label .content > p {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(2)
+  label
+  .content
+  > p,
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(3)
+  .row
+  .column
+  .card:nth-child(3)
+  label
+  .content
+  > p {
   font-size: 10px !important;
   margin: 0 !important;
 }
 
-
-.main .container .sign form .viewer .step:nth-child(4) .row:nth-child(n+1){
+.main .container .sign form .viewer .step:nth-child(4) .row:nth-child(n + 1) {
   justify-content: center;
   display: flex;
   align-items: center;
 }
-.main .container .sign form .viewer .step:nth-child(4) .row:nth-child(3){
+.main .container .sign form .viewer .step:nth-child(4) .row:nth-child(3) {
   justify-content: center;
   display: flex;
   align-items: center;
 }
-.main .container .sign form .viewer .step:nth-child(4) .row:nth-child(2) span{
+.main .container .sign form .viewer .step:nth-child(4) .row:nth-child(2) span {
   font-family: "Montserrat" !important;
   font-size: 14px;
   font-weight: 600;
 }
-.main .container .sign form .viewer .step:nth-child(4) .row:nth-child(3) p{
+.main .container .sign form .viewer .step:nth-child(4) .row:nth-child(3) p {
   font-family: "Montserrat" !important;
   font-size: 14px;
   font-weight: 600;
 }
-.main .container .sign form .viewer .step:nth-child(4) .row textarea{
+.main .container .sign form .viewer .step:nth-child(4) .row textarea {
   border: 2px solid #d8d8d8;
   font-weight: 500;
   font-family: "Montserrat" !important;
@@ -1716,84 +1998,210 @@ flex-direction: row;
   height: 0;
 }
 
-.main .container .sign form .viewer .step .row .card label [type="radio"]+.content {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step
+  .row
+  .card
+  label
+  [type="radio"]
+  + .content {
   cursor: pointer;
 }
 
-.main .container .sign form .viewer .step .row .card label [type="radio"]:checked+.content {
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step
+  .row
+  .card
+  label
+  [type="radio"]:checked
+  + .content {
   outline: 2px solid #4484fd;
 }
-main .container .sign form .viewer .step:nth-child(5){
+main .container .sign form .viewer .step:nth-child(5) {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(3){
+.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(3) {
   display: flex;
   width: 36%;
   flex-wrap: wrap;
   margin: auto;
 }
-.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(2) p{
+.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(2) p {
   font-family: "Montserrat" !important;
   font-size: 14px;
   font-weight: 600;
 }
-.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(3) .card{
+.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(3) .card {
   margin: 5px 10px;
 }
-.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(3) .card label .content{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(5)
+  .row:nth-child(3)
+  .card
+  label
+  .content {
   height: 70px;
   width: 70px;
 }
-.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(3) .card label .content p{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(5)
+  .row:nth-child(3)
+  .card
+  label
+  .content
+  p {
   font-size: 22px;
 }
-.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(5){
+.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(5) {
   display: flex;
   justify-content: center;
 }
-.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(5) textarea{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(5)
+  .row:nth-child(5)
+  textarea {
   font-family: "Montserrat" !important;
   font-size: 16px;
   text-indent: 5px;
   border: 2px solid #dddddd;
 }
-.main .container .sign form .viewer .step:nth-child(2) .row .column .row:nth-child(2) .container label{
+.main
+  .container
+  .sign
+  form
+  .viewer
+  .step:nth-child(2)
+  .row
+  .column
+  .row:nth-child(2)
+  .container
+  label {
   font-family: "Montserrat" !important;
   font-size: 12px;
   color: #595959;
   font-weight: 600;
 }
-.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(4) p{
+.main .container .sign form .viewer .step:nth-child(5) .row:nth-child(4) p {
   display: flex;
   justify-content: center;
   font-family: "Montserrat" !important;
   font-size: 14px;
   font-weight: 600;
 }
-.main .container .sign form .viewer .step:nth-child(6){
+.main .container .sign form .viewer .step:nth-child(6) {
   align-items: center;
   height: 500px;
   justify-content: center;
 }
-.main .container .sign form .viewer .step > .row:nth-child(1){
+.main .container .sign form .viewer .step > .row:nth-child(1) {
   animation-name: qouta;
   animation-duration: 1s;
 }
-.main .container .sign form .viewer .step > .row:not(:nth-child(1)){
+.main .container .sign form .viewer .step > .row:not(:nth-child(1)) {
   opacity: 0;
 }
-.main .container .sign form .viewer .step > .row:not(:nth-child(1)){
+.main .container .sign form .viewer .step > .row:not(:nth-child(1)) {
   animation-name: qouta-pop;
   animation-duration: 1s;
   animation-delay: 0.3s;
   animation-fill-mode: forwards;
 }
-.body{
- position: relative;
+.contact-links {
+  padding: 50px 0px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
 }
-.body .pop-up-success{
+.contact-links {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.contact-links h2 {
+  text-align: center;
+  border-bottom: 3px solid var(--main-font-color);
+  border-radius: 10%;
+  width: 70px;
+}
+.contact-links .container {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.contact-links .container a {
+  text-decoration: none;
+}
+.contact-links .container a i {
+  font-size: 80px;
+  background: #e3a664;
+  background: linear-gradient(to right, #e3a664 0%, #8a643c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.map-company .map-img img {
+  width: 100%;
+}
+.map-company {
+  position: relative;
+}
+.map-company .map-img{
+  position: relative;
+}
+.map-company .map-img p a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 50px;
+}
+.map-company .map-img p{
+  text-decoration: none;
+  display:none;
+  color: #fff;
+  text-shadow: 0 0 5px #000;
+  position:absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.map-company:hover .map-img p{
+  display: block;
+}
+.map-company:hover .map-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.605);
+}
+.body {
+  position: relative;
+}
+.body .pop-up-success {
   display: none;
   position: absolute;
   z-index: 1;
@@ -1804,29 +2212,29 @@ main .container .sign form .viewer .step:nth-child(5){
   box-shadow: 0 0 100px #000;
   padding: 50px;
 }
-.body .pop-up-success.view{
+.body .pop-up-success.view {
   display: block;
 }
-.body .pop-up-success .container{
+.body .pop-up-success .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.body .pop-up-success .container .icon i{
+.body .pop-up-success .container .icon i {
   font-size: 50px;
-  color: #52C41A;
+  color: #52c41a;
 }
-.body .pop-up-success .container h2{
-color: #343434;
-margin: 5px;
+.body .pop-up-success .container h2 {
+  color: #343434;
+  margin: 5px;
 }
-.body .pop-up-success .container p{
+.body .pop-up-success .container p {
   font-family: "Montserrat" !important;
   font-size: 15px;
   color: #7f7f7f;
   font-weight: 600;
 }
-.body .pop-up-success .container button{
+.body .pop-up-success .container button {
   background-color: var(--main-font-color);
   font-family: "Montserrat" !important;
   font-size: 15px;
@@ -1839,3 +2247,106 @@ margin: 5px;
   cursor: pointer;
 }
 
+#carouselExampleControlsNoTouching .carousel-inner .carousel-item .text-view {
+  display: flex;
+  justify-content: space-between;
+  margin: 150px;
+  margin-top: 270px;
+}
+#carouselExampleControlsNoTouching
+  .carousel-inner
+  .carousel-item
+  .text-view
+  .text {
+  flex: 40%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+#carouselExampleControlsNoTouching
+  .carousel-inner
+  .carousel-item
+  .text-view
+  .title-1 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: title;
+  animation-duration: 0.5s;
+  animation-delay: 0.2s;
+  animation-timing-function: ease-in-out;
+  font-size: var(--font-size-heading-desktop);
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  color: var(--main-font-color);
+}
+#carouselExampleControlsNoTouching
+  .carousel-inner
+  .carousel-item
+  .text-view
+  .title-2 {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: title;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.5s;
+  font-size: var(--font-size-heading-desktop);
+  margin: 0;
+  padding: 0;
+  color: var(--main-font-color);
+}
+#carouselExampleControlsNoTouching
+  .carousel-inner
+  .carousel-item
+  .text-view
+  .content {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: title;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0.8s;
+  font-size: var(--font-size-content-desktop);
+  padding-top: 20px;
+}
+#carouselExampleControlsNoTouching .carousel-inner .carousel-item .text-view a {
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: title;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s;
+  width: 200px;
+  background-color: var(--main-font-color);
+  text-align: center;
+  padding: 15px 0;
+  text-decoration: none;
+  color: #fff;
+  font-size: var(--font-size-content-desktop);
+}
+#carouselExampleControlsNoTouching
+  .carousel-inner
+  .carousel-item
+  .text-view
+  .img {
+  flex: 50%;
+}
+#carouselExampleControlsNoTouching
+  .carousel-inner
+  .carousel-item
+  .text-view
+  .img
+  img {
+  height: 700px;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  animation-name: service;
+  animation-duration: 1s;
+  animation-timing-function: 1s;
+  animation-delay: 0.4s;
+  animation-direction: alternate;
+  position: relative;
+  top: -250px;
+  left: 100px;
+}
