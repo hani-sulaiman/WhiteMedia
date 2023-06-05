@@ -1145,6 +1145,9 @@
   .outdoor-led .column-2 img{
     top: -50px;
   }
+  .outdoor-led {
+    height: 100vh !important;
+  }
 }
 
 @media only screen and ((min-width: 390px) and (max-width: 750px)) {
