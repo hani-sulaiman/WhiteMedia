@@ -4,6 +4,41 @@
   --card-height-mobile: 250px;
 }
 
+@media only screen and ((min-width: 0px) and (max-width:360px)) {
+  .our-services {
+    height: 141vh ;
+  }
+
+  .our-services .container-services .cards-services {
+    height: 600px;
+  }
+
+  .nav .logo img {
+    width: 160px;
+  }
+}
+
+@media only screen and((min-height:800px)) {
+  .slide .column .row .slide-image {
+    width: 368px !important;
+    height: auto !important;
+  }
+
+  .menu-open {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and ((min-height: 800px) and (min-width:370px)) {
+  .main .container .sign form .buttons button {
+    width: 175px;
+    height: 45px;
+  }
+}
+
+
+
 /*Mobile Design*/
 @media only screen and ((min-height: 738px) and (max-width:700px)) {
 
@@ -81,7 +116,10 @@
   /* .our-services {
     height: 110vh !important;
   } */
-
+    .our-services{
+      padding-bottom: 100px !important;
+      height: auto !important;
+    }
   .our-services .container-services .heading-services .service-picker {
     align-items: flex-end;
     justify-content: flex-start;
@@ -92,7 +130,11 @@
     padding: 10px;
     font-size: 15px;
   }
-
+  section.some-works h2{
+    width: 180px;
+    left: 10px;
+    top: -60px;
+  }
   .viewer-services .show-service {
     padding: 5px;
     display: flex !important;
@@ -574,9 +616,10 @@
     margin: 25px;
   }
 
-  header .column-2 {
+  header.service-page  .column-2 {
     flex-basis: unset;
     margin: 0;
+    align-items: center;
   }
 
   header .column img {
@@ -584,7 +627,8 @@
   }
 
   header .column .container .title {
-    font-size: 35px;
+    margin: 0;
+    font-size: 32px;
   }
 
   header .column .container .content {
@@ -829,9 +873,17 @@
   }
 
   .our-services .container-services .cards-services {
-    height: 400px;
+    /* height: 400px; */
   }
-
+  section.order .column:nth-child(1){
+    margin-left: 0;
+  }
+  section.people-opinion h2{
+    margin-left: 40px;
+  }
+  section.some-works h2,.our-services .container-services .heading-services .title-services{
+    margin-left:28px;
+  }
   section.order .column .card img {
     height: 85px !important;
     width: auto;
@@ -844,7 +896,7 @@
   section.people-opinion .people .slide-opinion {
     padding: 62px 0px 0px 12px;
     max-width: 301px;
-    height: 450px;
+    height: auto;
   }
 
   .contactus-section .container .photo img {
@@ -891,11 +943,13 @@
     animation-timing-function: ease-in-out;
     font-size: var(--font-size-heading-mobile);
     width: 500px;
+
   }
 
   #carouselExampleControlsNoTouching .carousel-inner .carousel-item .text-view .title-2 {
     font-size: var(--font-size-heading-mobile);
     color: var(--main-font-color);
+    margin-top: 0 !important;
   }
 
   #carouselExampleControlsNoTouching .carousel-inner .carousel-item .text-view .content {
@@ -913,7 +967,7 @@
   }
 
   #carouselExampleControlsNoTouching .carousel-inner .carousel-item .text-view .img img {
-    height: 250px;
+    height: 350px;
     top: 0px;
     left: 20px;
   }
@@ -1045,6 +1099,32 @@
   .partners .container .thumbil{
     padding: 0
   }
+  .section.service-page {
+    height: auto;
+  }
+  .section.service-page .container .title-min{
+    font-size: 22px;
+  }
+  .section.service-page .container .content{
+    font-size: 12px;
+  }
+  .our-services .container-services .cards-services {
+    height: 600px;
+  }
+  section.abu-dhabi .cover .card{
+    transform: translateX(-10%) translateY(-55%);
+    top:55%;
+    left: 10%;
+    width: 88px !important;
+    height: 115px !important;
+  }
+
+  section.abu-dhabi .cover .card .title p{
+    width: 100px;
+    left: 48%;
+    font-size: var(--font-size-content-mobile);
+    margin-top: 40px;
+  }
 }
 
 @media only screen and ((min-width: 390px) and (max-width: 750px)) {
@@ -1060,6 +1140,7 @@
     width: 175px;
     height: 45px;
   }
+  
 }
 
 @media only screen and ((min-width: 360px) and (max-width:390px)) {
@@ -1080,16 +1161,10 @@
     height: 141vh !important;
   } */
 
-  .our-services .container-services .cards-services {
-    height: 600px;
-  }
+
 }
 
 @media only screen and ((min-width: 0px) and (max-width:360px)) {
-  .our-services {
-    height: 141vh !important;
-  }
-
   .our-services .container-services .cards-services {
     height: 600px;
   }
@@ -1117,3 +1192,4 @@
     height: 45px;
   }
 }
+
