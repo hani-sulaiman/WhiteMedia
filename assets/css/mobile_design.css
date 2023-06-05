@@ -646,7 +646,7 @@
 
   .section.service-page .container .title,
   .section.service-page .container .title-min {
-    font-size: 35px;
+    font-size: 32px;
   }
 
   .section.service-page .container .content {
@@ -1103,7 +1103,7 @@
     height: auto;
   }
   .section.service-page .container .title-min{
-    font-size: 22px;
+    font-size: 18px;
   }
   .section.service-page .container .content{
     font-size: 12px;
@@ -1111,19 +1111,39 @@
   .our-services .container-services .cards-services {
     height: 600px;
   }
-  section.abu-dhabi .cover .card{
+  section.abu-dhabi .cover .card,.salam-led .cover .card{
     transform: translateX(-10%) translateY(-55%);
     top:55%;
     left: 10%;
     width: 88px !important;
     height: 115px !important;
   }
-
-  section.abu-dhabi .cover .card .title p{
+  .salam-led{
+    overflow: hidden;
+    padding-top: 100px;
+    height: 40vh;
+  }
+  .salam-led img{
+    transform: scale(1.2);
+  }
+  section.abu-dhabi .cover .card .title p,.salam-led .cover .card .title p{
     width: 100px;
     left: 48%;
     font-size: var(--font-size-content-mobile);
     margin-top: 40px;
+  }
+  .led-works .container {
+    flex-direction: column;
+  }
+  .led-works .container a img{
+    width: 100%;
+  }
+  .led-works .container a p{
+   left: 4% !important;
+   font-size: 15px !important; 
+  }
+  .outdoor-led .column-2 img{
+    top: -50px;
   }
 }
 
