@@ -1232,7 +1232,7 @@ header.contact-page .mask .container h1 {
 }
 
 .contactus-section .container {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap-reverse;
