@@ -173,7 +173,7 @@ body {
 }
 
 .nav .social-media .qouta {
-  min-width: 240px;
+  min-width: 250px;
   right: 45px;
   position: relative;
   top: 5px;
@@ -199,7 +199,7 @@ body {
 }
 
 .nav .social-media .quick-link {
-  color: #de974c;
+  color: var(--main-font-color);
   padding-top: 2px;
 }
 
@@ -248,7 +248,7 @@ body {
 
 .nav .social-media a i {
   font-size: 25px;
-  color: #bf913f;
+  color: var(--main-font-color);
   transition: all ease-in-out 0.5s;
   transform: scale(1);
 }
