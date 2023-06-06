@@ -1,4 +1,5 @@
-nextBTN = document.querySelector(".carousel-control-next");
+function Slider(){
+  nextBTN = document.querySelector(".carousel-control-next");
 prevBTN = document.querySelector(".carousel-control-prev");
 slides = document.querySelectorAll(".carousel-item");
 currentIndex = 0;
@@ -92,3 +93,4 @@ $(window).resize(function() { // no `on` here
   checkVideoRespones();
 }); 
 checkVideoRespones();
+}

@@ -3,8 +3,9 @@ window.onload = () => {
   setTimeout(() => {
     document.querySelector(".body").classList.remove("hide");
     document.querySelector(".load").classList.add("hide");
+    Main();
+    Slider();
   }, 800);
-  Main();
 };
 function Main() {
 
