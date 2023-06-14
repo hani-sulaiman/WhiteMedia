@@ -160,8 +160,9 @@ body {
   animation-name: logo;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-  flex-basis: 30%;
-  padding: 16px;
+  flex-basis: 17%;
+  /* padding: 16px; */
+  margin-left: 32px;
 }
 
 .nav .social-media {
@@ -400,10 +401,9 @@ body {
 }
 
 .our-services .container-services .cards-services .card-service:hover {
-  transform: translateY(-5px);
+  transform: translateY(-15px) scale(1.1);
   transition: all ease-in-out 0.5s;
 }
-
 .our-services .container-services .cards-services .card-service a {
   text-decoration: none;
   display: flex;
@@ -1004,7 +1004,7 @@ header.contact-page {
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 85vh;
+  height: 46vh;
 }
 
 header.about-page video,
@@ -1024,7 +1024,7 @@ header.contact-page .mask {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0);
   position: absolute;
 }
 
@@ -1041,13 +1041,15 @@ header.about-page .mask .container h1,
 header.contact-page .mask .container h1 {
   animation-name: title;
   animation-duration: 0.5s;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: eased-in-out;
+  animation-fill-mode: forwards;
   font-size: 6rem;
   font-family: "Gilroy";
   background: #c48f56;
   background: linear-gradient(to right, #c48f56 50%, #cca46a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  position: relative;
 }
 
 .who-us {
@@ -1190,16 +1192,19 @@ header.contact-page .mask .container h1 {
   font-size: 3rem;
   line-height: 1.2;
   font-family: "Montserrat" !important;
+  color: var(--main-font-color);
 }
 
 .partners .container .thumbil {
   padding: 50px;
   display: flex;
-  width: 80%;
+  width: 100%;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .partners .container .thumbil .card {
+  flex: 30%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1290,32 +1295,32 @@ body.qouta {
 
 .main {
   border-radius: 5px;
-  width: 1100px;
+  width: 65%;
   box-shadow: 3px 3px 3px rgb(47 47 47 / 10%);
 }
 
 .main>.container {
   width: 100%;
-  height: 85vh;
+  height: 100vh;
   display: flex;
 }
 
 .main .container .sidebar {
-  border-radius: 5px 0 0 5px;
   background: linear-gradient(135deg,
       hsla(31, 65%, 63%, 1) 0%,
       hsla(31, 48%, 55%, 1) 100%);
   display: flex;
   flex-direction: column;
   flex: 30%;
+  min-width: 300px;
   height: 100%;
 }
 
 .main .container .sign {
-  border-radius: 0 5px 5px 0;
   background-color: #fff;
   flex: 70%;
   height: 100%;
+  min-width: 715px;
 }
 
 .main .container .sidebar .row {
@@ -1488,8 +1493,8 @@ body.qouta {
   justify-content: space-evenly;
   width: 40%;
   position: relative;
-  top: 60px;
   margin: auto;
+  top: 170px;
 }
 
 .main .container .sign form .buttons button {
@@ -1500,6 +1505,7 @@ body.qouta {
   border: none;
   cursor: pointer;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.215);
+  margin-left: 10px;
 }
 
 .main .container .sign form .buttons button.next {
@@ -1912,7 +1918,7 @@ main .container .sign form .viewer .step:nth-child(5) {
   text-align: center;
   border-bottom: 3px solid var(--main-font-color);
   border-radius: 10%;
-  width: 70px;
+  width: 100px;
 }
 
 .contact-links .container {
@@ -1980,6 +1986,11 @@ main .container .sign form .viewer .step:nth-child(5) {
 
 .body {
   position: relative;
+}
+
+.qouta .body {
+  position: relative;
+  width: 100%;
 }
 
 .body .pop-up-success {

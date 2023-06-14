@@ -79,7 +79,9 @@
   * {
     box-sizing: border-box;
   }
-
+  .main .container .sign{
+    min-width: unset;
+  }
   .slide video {
     position: relative;
     height: 100vh !important;
@@ -174,7 +176,7 @@
   }
 
   .nav .logo img {
-    width: 200px;
+    width: 85px;
   }
 
   .social-media,
@@ -335,7 +337,7 @@
   }
 
   .nav .logo img {
-    width: 200px;
+    width: 85px;
   }
 
   .social-media,
@@ -448,10 +450,15 @@
     height: 100px;
   }
 
-  .nav .logo img {
-    width: 200px;
+  .nav .logo {
+    margin-left: 25px;
   }
-
+  .nav .logo img {
+    width: 85px;
+  }
+  .menu .logo{
+    margin-left: 40px;
+  }
   .social-media,
   .social-media a,
   .social-media .qouta,

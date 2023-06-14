@@ -42,11 +42,11 @@
 @keyframes title {
   0% {
     opacity: 0;
-    transform: translateY(50px) translateX(20px) scale(1.3);
+    transform: translateY(90px) translateX(20px) scale(1.3);
   }
   100% {
     opacity: 1;
-    transform: translateY(0) translateX(0) scale(1);
+    transform: translateY(40px) translateX(0) scale(1);
   }
 }
 @keyframes link {
