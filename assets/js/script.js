@@ -4,7 +4,11 @@ window.onload = () => {
     document.querySelector(".body").classList.remove("hide");
     document.querySelector(".load").classList.add("hide");
     Main();
-    Slider();
+    if (typeof Slider == 'function') {
+      Slider();
+    }
+    
+
   }, 800);
 };
 function Main() {

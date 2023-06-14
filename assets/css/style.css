@@ -97,7 +97,7 @@ body {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .body {
@@ -855,10 +855,12 @@ header .column {
 }
 
 header .column-1 {
-  margin: 20px;
+  margin: 50px;
   margin-top: 70px;
   padding: 30px;
   flex-basis: 50%;
+  display: flex;
+  align-self: center;
 }
 
 header .column-2 {
@@ -2049,7 +2051,7 @@ main .container .sign form .viewer .step:nth-child(5) {
   display: flex;
   justify-content: space-between;
   margin: 150px;
-  margin-top: 270px;
+  margin-top: 16%;
 }
 
 #carouselExampleControlsNoTouching .carousel-inner .carousel-item .text-view .text {
